@@ -32,6 +32,7 @@ Vagrant.configure("2") do |config|
 
       # Update /etc/hosts to include the hostname
       echo "192.168.10.2 dockerclass.example.com dokaclass" | sudo tee -a /etc/hosts
+      sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config; sudo systemctl restart sshd;"
     SHELL
   end
 end
