@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
       #echo "student ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/student
 
       # Update /etc/hosts to include the hostname
-      echo "192.168.10.2 classsdoka.example.com dokaclass" | sudo tee -a /etc/hosts
+      echo "192.168.10.2 classdoka.example.com classdoka" | sudo tee -a /etc/hosts
       # Debugging: Check /etc/ssh/sshd_config before change
       sudo grep PasswordAuthentication /etc/ssh/sshd_config
 
